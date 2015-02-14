@@ -627,7 +627,7 @@ section.contact {
   .skills,
   .about,
   .work,
-  .contact {
+  section.contact {
     padding-left: 6%;
     padding-right: 6%;
   }
@@ -728,5 +728,15 @@ section.contact {
   }
   a.anchor {
     top: -52px;
+  }
+  .image-browser .close {
+    right: 0;
+    top: 0;
+  }
+  .image-browser .next {
+    right: 0;
+  }
+  .image-browser .previous {
+    left: 0;
   }
 }
