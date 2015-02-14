@@ -467,10 +467,12 @@ a.contact {
   text-align: center;
 }
 .main-image {
-  width: 100%;
   margin-bottom: 4px;
   background: #f4f4f4;
   text-align: center;
+}
+.main-image img {
+  width: 100%;
 }
 .one-sub {
   width: 50%;
@@ -620,6 +622,15 @@ section.contact {
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .top-bar,
+  .intro,
+  .skills,
+  .about,
+  .work,
+  .contact {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
   .ingress,
   .crate,
   .skills-description,
@@ -629,8 +640,13 @@ section.contact {
   .contact-details,
   .work-desc,
   .work-images,
-  .contact-form {
+  .contact-form,
+  .image-description,
+  .image-description + img {
     width: 100%;
+  }
+  .image-description {
+    border: none;
   }
   .crate img {
     position: inherit;
@@ -654,9 +670,13 @@ section.contact {
     top: 22px;
   }
   .contact-details,
-  .work-images,
+  .work-desc,
   .buzzword-cloud {
     padding-left: 0;
+  }
+  .work-images {
+    padding-right: 0;
+    margin-bottom: 20px;
   }
   .logo {
     float: inherit;
@@ -669,7 +689,7 @@ section.contact {
   .mobile-menu-toggle {
     display: block;
     position: absolute;
-    top: 12px;
+    top: 5px;
     right: 0;
     color: #fff;
     font-size: 1.8em;
