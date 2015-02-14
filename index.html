@@ -152,8 +152,8 @@
           <a class="anchor" id="about"></a>
           <section class="about" id="about">
             <div class="about-wrap clearfix">
-              <h2>Hello, my name is Jaakko</h2>
               <div class="about-text">
+                <h2>Hello, my name is Jaakko</h2>
                 <p>I'm currently located in the general vicinity of Turku, Finland.
                   I'm studying for an engineer's degree in information technology and
                   will hopefully focus on software design.</p>
@@ -193,6 +193,17 @@
           <section class="work" id="work">
             <div class="work-wrap">
               <div class="work-intro clearfix">
+                <div class="work-images">
+                  <div class="img-wrap main-image">
+                    <img src="img/work/wp-index-3-prev.jpg">
+                  </div>
+                  <div class="img-wrap sub-image">
+                    <img class="one-sub" src="img/work/wp-index-2-prev.jpg">
+                  </div>
+                  <div class="img-wrap sub-image">
+                    <img class="two-sub" src="img/work/wp-index-1-prev.jpg">
+                  </div>
+                </div>
                 <div class="work-desc">
                   <h3>Wallpaper database</h3>
                   <div class="p-holder">
@@ -205,12 +216,11 @@
                       when they needed them. The site also tries to do some commons
                       tasks for the user, for instance guess the size of their
                       monitor and suggest the right size of wallpapers based on that.</p>
+                    <h4>Technologies used</h4>
+                    <p>Django, Python, Pillow, SQLite, Haystack, Scrapy, JavaScript,
+                      jQuery, entypo.
+                    </p>
                   </div>
-                </div>
-                <div class="work-images">
-                  <img class="main-image" src="http://placehold.it/350x100">
-                  <img class="one-sub" src="http://placehold.it/175x100">
-                  <img class="two-sub" src="http://placehold.it/175x100">
                 </div>
               </div>
             </div>
@@ -240,6 +250,80 @@
             </div>
           </section>
         </div>
+
+        <section class="image-browser">
+          <div class="image-container">
+            <div class="image-1 clearfix">
+              <a class="anchor" id="image-1"></a>
+              <div class="image-description">
+                <h3>Frontpage</h3>
+                <p>The goal with this site was to create a simple yet sleek
+                  interface for finding good quality wallpapers. I attempted to
+                  keep all the relevant controls there, but also keep them out of
+                  sight until needed as to make the user experience simple to
+                  start off.</p>
+              </div>
+            </div>
+            <div class="image-2 clearfix">
+              <a class="anchor" id="image-2"></a>
+              <div class="image-description">
+                <h3>Search</h3>
+                <p>I wanted search to be the most important navigation component
+                on the site. After focusing the search input field and typing
+                your first keystroke, the search option bar animates into view.
+                You can always pop up the menu yourself from the hambuger menu on
+                the left.</p>
+                <p>I wanted to offer a service for a user who knew what kind
+                of wallpaper they were after. Because of this I took the liberty
+                to not keep the search options contantly in view. They rather pop
+                up after you've begun your search to only give one strating point
+                for the user to start off from. The filters enable you to
+                limit the results to the ones suiting your computer and needs.
+                This approach to the menu also makes it easier to optimize the
+                site for mobile.</p>
+                <p>Now, later on, I wouldn't have grouped the "arrange by" option
+                with the rest of the filters. On a very basic level these options
+                do something different from the rest - they rearrange content
+                instead of limiting it.</p>
+              </div>
+            </div>
+            <div class="image-3 clearfix">
+              <a class="anchor" id="image-3"></a>
+              <div class="image-description">
+                <h3>Wallpaper view</h3>
+                <p>With great wallpapers the site is easy to make look good. I
+                  wanted the wallpaper view to focus on the wallpaper itself.
+                  You can fullscreen the image to see it in all of its glory.</p>
+                  <p>For me the msot bothersome part of finding a wallpaper
+                  was the amount of trouble you needed to go through
+                  in order to preview it properly. Here I wanted to make it possible
+                  without having to navigate to a new page. The image is also draggable
+                  for those situation when it overlaps your browser window.</p>
+                <p>By contiuing to browse these screenshots, you'll se the different
+                  states for the wallpaper view.</p>
+              </div>
+            </div>
+            <div class="image-4">
+              <a class="anchor" id="image-4"></a>
+
+            </div>
+            <div class="image-5">
+              <a class="anchor" id="image-5"></a>
+
+            </div>
+            <div class="image-6">
+              <a class="anchor" id="image-6"></a>
+
+            </div>
+            <div class="image-7">
+              <a class="anchor" id="image-7"></a>
+
+            </div>
+          </div>
+          <button class="close"><i class="fa fa-times"></i></button>
+          <button class="next"><i class="fa fa-chevron-right"></i></button>
+          <button class="previous"><i class="fa fa-chevron-left"></i></button>
+        </section>
 
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/plugins.js"></script>

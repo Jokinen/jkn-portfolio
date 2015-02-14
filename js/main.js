@@ -51,6 +51,19 @@ function scrollToAnchor(aid){
     $('html,body').stop().animate({scrollTop: aTag.offset().top},'slow');
 }
 
+function scrollToImage(aid){
+  var aTag = $("a[id='"+ aid +"']");
+  $(".image-browser").stop().animate({scrollTop: aTag.offset().top - $(".image-browser").offset().top + $(".image-browser").scrollTop() },'slow');
+}
+
+function buildImages(number) {
+  var imgs = [];
+  for (i = 1; i <= number; i++) {
+    imgs.push('<img src="img/work/wp-index-' + i + '.jpg">');
+  }
+  return imgs;
+}
+
 $(document).ready(function() {
   $(".contact-form label").addClass("js-label");
 
@@ -69,12 +82,18 @@ $(document).ready(function() {
     var icon = $(this).find(".fa");
     if (icon.hasClass("fa-expand")) {
       $(this).html('<i class="fa fa-compress"></i> Close All');
+      $(".skill-list .has-child").each(function() {
+        if ( !($(this).hasClass("open")) ) {
+          toggleSkills($(this));
+        }
+      });
     } else {
       $(this).html('<i class="fa fa-expand"></i> Expand All');
+      $(".skill-list .has-child").each(function() {
+        if ( ($(this).hasClass("open")) )
+          toggleSkills($(this));
+        });
     }
-    $(".skill-list .has-child").each(function() {
-      toggleSkills($(this));
-    });
   });
 
   $(".mobile-menu-toggle").click(function() {
@@ -99,5 +118,61 @@ $(document).ready(function() {
     if (!($(this).val())) {
       $(this).prev("label").addClass("js-label");
     }
+  });
+
+  $(".work-images").click(function() {
+    $(".image-browser").addClass("on-focus");
+    $("body").css("overflow", "hidden");
+    if ( !($(".image-container").hasClass("loaded")) ) {
+      $(".image-container").addClass("loaded");
+      var imgs = buildImages(7);
+      for (i = 0; i < imgs.length; i++) {
+        if (i == 0) {
+          $(".image-container .image-" + (i + 1) ).append($(imgs[i]).addClass("current"));
+        } else {
+          $(".image-container .image-" + (i + 1) ).append($(imgs[i]));
+        }
+      }
+    }
+  });
+
+  $(".image-browser .close").click(function() {
+    $(".image-browser").removeClass("on-focus");
+    $("body").css("overflow", "inherit");
+  });
+
+  var next = 2;
+  var prev = 7;
+
+  $(".next").click(function() {
+    console.log(next + ", " + prev);
+    var targetID = "image-" + next;
+    scrollToImage(targetID);
+    if (next == 7) {
+      next = 1;
+      prev += 1;
+    } else if (next == 2) {
+      next += 1;
+      prev = 1;
+    } else {
+        next += 1;
+        prev += 1;
+      }
+  });
+
+  $(".previous").click(function() {
+    console.log(next + ", " + prev)
+    var targetID = "image-" + prev;
+    scrollToImage(targetID);
+    if (prev == 6) {
+      next = 7;
+      prev -= 1;
+    } else if (prev == 1) {
+      next -= 1;
+      prev = 7;
+    } else {
+        next -= 1;
+        prev -= 1;
+      }
   });
 });
