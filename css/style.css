@@ -438,11 +438,19 @@ a.contact {
 .work-wrap {
   margin: 0 auto;
   max-width: 1200px;
+  background: #f4f4f4;
 }
 .work-desc {
   width: 50%;
   float: left;
   padding-left: 20px;
+  padding: 30px 30px 30px 20px;
+}
+.info-list {
+  list-style: none;
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 .work-images {
   width: 50%;
@@ -457,32 +465,20 @@ a.contact {
   font: normal normal normal 13px/1 FontAwesome;
   color: #fff;
   background: rgba(0,0,0,0.8);
-  top: 35%;
-  left: 40%;
+  bottom: 0;
+  right: 20px;
   padding: 20px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 3px 0 0 0;
+  -moz-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
   font-size: 4em;
   text-align: center;
 }
 .main-image {
-  margin-bottom: 4px;
   background: #f4f4f4;
   text-align: center;
-}
-.main-image img {
-  width: 100%;
-}
-.one-sub {
-  width: 50%;
-  padding-right: 2px;
-  float: left;
-}
-.two-sub {
-  width: 50%;
-  padding-left: 2px;
-  float: left;
+  overflow: hidden;
+  max-height: 430px;
 }
 section.contact {
   min-height: 60%;
@@ -670,9 +666,17 @@ section.contact {
     top: 22px;
   }
   .contact-details,
-  .work-desc,
   .buzzword-cloud {
     padding-left: 0;
+  }
+  .work-desc {
+    padding: 0 20px 20px 20px;
+  }
+  .img-wrap {
+    max-height: 280px;
+  }
+  .work-images:after {
+    right: 0;
   }
   .work-images {
     padding-right: 0;
