@@ -1,0 +1,77 @@
+positionSection()
+  margin 0 auto
+  max-width 1200px
+  padding 0 20px
+
+html
+  height 100%
+  width 100%
+  margin 0
+  padding 0
+
+*
+  box-sizing border-box
+  -moz-box-sizing border-box
+  margin 0
+  padding 0
+
+body
+  top 0
+  left 0
+  position relative
+  width 100%
+  height 100%
+  margin 0
+  padding 0
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background #f7f7f7
+
+h1, h2, h3, h4
+  margin-bottom 0.4em
+
+p
+  margin-bottom 1.2em
+  line-height 1.6
+
+a
+  border-bottom 2px solid #3f52f1
+  transition border-bottom 0.1s ease-out
+
+  color #3f52f1
+  font-weight 500
+  text-decoration none
+
+a:hover
+  border-bottom-color transparent
+
+.wrap
+  height 100%
+  width 100%
+
+.intro
+  background #FFF
+  padding 30px 0
+  positionSectionOne()
+
+.intro-wrap
+  positionSection()
+  height 340px
+  position relative
+
+.ingress
+  color #444
+  position relative
+  top 50%
+  transform translateY(-50%)
+
+  @media screen and (min-width: 600px)
+    width 60%
+
+.ingress h3
+  font-weight 600
+  font-size 1.8em
+  text-transform uppercase
+
+.ingress p
+  font-size 1.24em
+  font-weight 300
