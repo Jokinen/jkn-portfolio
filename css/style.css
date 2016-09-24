@@ -414,7 +414,6 @@ a.contact {
 }
 .contact-details-list li .tooltip:before {
   content: " ";
-  content: " ";
   border: 6px solid transparent;
   border-bottom: 6px solid #000;
   position: absolute;
