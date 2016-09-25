@@ -3,11 +3,23 @@ positionSection()
   max-width 1200px
   padding 0 20px
 
+.cf
+  zoom 1
+
+.cf:after,
+.cf:before
+  content ""
+  display table
+
+.cf:after
+  clear both
+
 html
   height 100%
   width 100%
   margin 0
   padding 0
+  font-size 16px;
 
 *
   box-sizing border-box
@@ -24,7 +36,11 @@ body
   margin 0
   padding 0
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background #fff
+  background #fcfcfc
+
+footer
+  padding 60px 0
+  text-align center
 
 h1, h2, h3, h4
   margin-bottom 0.4em
@@ -34,7 +50,7 @@ p
   line-height 1.6
 
 a
-  border-bottom 2px solid #4fc5f3
+  border-bottom 2px solid #fbc173
   transition border-bottom 0.1s ease-out
 
   color #fff
@@ -44,17 +60,25 @@ a
 a:hover
   border-bottom-color transparent
 
+ul
+  list-style-position inside
+
+.description
+  font-weight 300
+  font-size 1.16rem
+  text-align center
+  color #888
+
 .wrap
-  height 100%
   width 100%
 
 .intro
-  padding 30px 0
+  padding 30px 0 100px
   positionSectionOne()
 
 .intro-wrap
   positionSection()
-  height 340px
+  height 140px
   position relative
 
 .ingress
@@ -76,11 +100,104 @@ a:hover
   font-weight 300
 
 .header-background
-  position fixed
+  position absolute
   top 0
   left 0
-  height 500px
+  height 240px
   width 100%
-  background linear-gradient(26deg, #53f 14%, #05aeff 70%, #33fff6 91%)
+  background linear-gradient(26deg, #d689ce 14%, #f17c8f 70%, #fbc173 91%)
   transform-origin 0
-  transform skewY(-8deg)
+  transform skewY(-4deg)
+
+.welcome
+  text-align center
+
+.hello
+  text-align center
+  font-weight 800
+  font-size 6rem
+  letter-spacing -8px
+
+  @media screen and (min-width: 800px)
+    font-size 12.5rem
+    letter-spacing -20px
+
+.looking-and-skills
+  positionSection()
+  margin-top 100px
+
+.card
+  display inline-block
+  width 100%
+  margin 0 auto
+  padding 30px 40px
+  background #fff
+  border-radius 6px
+  box-shadow 0 10px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)
+  text-align left
+  transition all ease-in .1s
+
+.card:hover
+  margin-top -10px
+  box-shadow 0 10px 45px rgba(50,50,93,.16),0 5px 25px rgba(0,0,0,.12)
+
+.card__title
+  margin 0 0 0.6em
+  font-weight 600
+  letter-spacing -0.01em
+
+.card__list li
+  padding-left 20px
+  position relative
+  list-style-type none
+  line-height 1.8
+  color #888
+  font-size 1.1em
+  font-weight 300
+
+.card__list li:before
+  content "+"
+  position absolute
+  left 0
+  font-weight 600
+
+.card__list.blue li:before
+  color #5d9eda
+
+.card__list.green li:before
+  color #43d6a2
+
+.half
+  width 100%
+  float left
+  text-align center
+  margin-bottom 30px
+
+  @media screen and (min-width: 800px)
+    width 50%
+    padding 0 30px
+
+    &:last-child
+      padding-right 0
+
+    &:first-child
+      padding-left 0
+
+.contact
+  text-align center
+  margin 100px 0
+
+.button-link
+  display inline-block
+  padding 8px 20px
+  background #43d6a2
+  border-radius 20px
+  border-bottom none
+
+.button-link.bigger
+  padding 12px 28px
+  border-radius 80px
+
+  letter-spacing 1px
+  font-size 1.3rem
+
