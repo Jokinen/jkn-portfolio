@@ -89,9 +89,17 @@
         <footer>
             <span class="description"
                 >&copy;
-                <script type="text/javascript">
-                    document.write("" + new Date().getFullYear());
-                </script></span
+                <span id="copyright">
+                    <script type="text/javascript">
+                        document
+                            .getElementById("copyright")
+                            .appendChild(
+                                document.createTextNode(
+                                    new Date().getFullYear()
+                                )
+                            );
+                    </script></span
+                ></span
             >
         </footer>
     </body>
