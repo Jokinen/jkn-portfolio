@@ -1,4 +1,51 @@
-@require "_variables"
+:root
+  --text-color #605d64
+  --text-color-title #222
+  --text-color-highlight #222222
+  --background #fcfcfc
+  --decorative-gradient linear-gradient(26deg, #d689ce 14%, #f17c8f 70%, #fbc173 91%)
+  --card-background #fff
+  --shadow-base rgba(50,50,93,.1)
+  --shadow-base-hover rgba(50,50,93,.16)
+  --shadow-highlight rgba(0,0,0,.07)
+  --shadow-highlight-hover rgba(0,0,0,.12)
+  --link-decoration-color #fbc173
+
+  --blue #4179ad
+  --blue-light #5594ce
+  --green #278463
+  --green-light #3ba07c
+
+  --letter-1 #fbc173
+  --letter-2 #f17c8f
+  --letter-3 #d689ce
+  --letter-4 var(--green-light)
+  --letter-5 var(--blue-light)
+  --letter-6 #000
+
+@media (prefers-color-scheme: dark)
+  :root
+    --text-color #ebebeb
+    --text-color-title #ebebeb
+    --text-color-highlight #92959d
+    --background #001016
+    --decorative-gradient linear-gradient(26deg,#741d50 14%,#2f2a9e 60%,#0f6cce 98%)
+    --card-background #282732
+    --shadow-base rgba(0, 0, 0, .0)
+    --shadow-base-hover rgba(0, 0, 0, .0)
+    --shadow-highlight rgba(0, 0, 0, .0)
+    --shadow-highlight-hover rgba(0, 0, 0, .0)
+    --link-decoration-color #9644eb
+
+    --blue #6097e0
+    --green #1e684d
+
+    --letter-1 #ffae40
+    --letter-2 #df3954
+    --letter-3 #dd3ecc
+    --letter-4 var(--green-light)
+    --letter-5 var(--blue-light)
+    --letter-6 #fff
 
 positionSection()
   margin 0 auto
@@ -27,7 +74,7 @@ body
   margin 0
   padding 0
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background #fcfcfc
+  background var(--background)
 
 footer
   padding 0 0 46px
@@ -41,7 +88,7 @@ p
   line-height 1.6
 
 a
-  border-bottom 2px solid #fbc173
+  border-bottom 3px solid var(--link-decoration-color)
   transition border-bottom 0.1s ease-out
 
   color #fff
@@ -71,7 +118,7 @@ section
   font-weight 300
   font-size 1.16rem
   text-align center
-  color $textColor
+  color var(--text-color)
 
 .wrap
   width 100%
@@ -107,7 +154,7 @@ section
   left 0
   height 220px
   width 100%
-  background linear-gradient(26deg, #d689ce 14%, #f17c8f 70%, #fbc173 91%)
+  background var(--decorative-gradient)
   transform-origin 0
   transform skewY(-4deg)
 
@@ -140,9 +187,9 @@ section
   width 100%
   margin 0 auto
   padding 20px 24px
-  background #fff
+  background var(--card-background)
   border-radius 6px
-  box-shadow 0 10px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)
+  box-shadow 0 10px 35px var(--shadow-base),0 5px 15px var(--shadow-highlight)
   text-align left
   transition all ease-in .1s
 
@@ -151,12 +198,13 @@ section
 
 .card:hover
   transform scale(1.01)
-  box-shadow 0 10px 45px rgba(50,50,93,.16),0 5px 25px rgba(0,0,0,.12)
+  box-shadow 0 10px 45px var(--shadow-base-hover),0 5px 25px var(--shadow-highlight-hover)
 
 .card__title
   margin 0 0 0.6em
-  font-weight 600
-  font-size 1.17em
+  font-weight 700
+  font-size 1.3em
+  color var(--text-color-title)
   letter-spacing -0.01em
 
 .card__list li
@@ -164,7 +212,7 @@ section
   position relative
   list-style-type none
   line-height 1.8
-  color $textColor
+  color var(--text-color)
   font-size 1.1em
   font-weight 300
 
@@ -173,13 +221,7 @@ section
   position absolute
   left 0
   font-weight 600
-  color: inherit
-
-.card__list.blue li:before
-  color $blue
-
-.card__list.green li:before
-  color $green
+  color var(--text-color-highlight)
 
 .contact
   text-align center
@@ -188,7 +230,7 @@ section
 .button-link
   display inline-block
   padding 8px 20px
-  background $green
+  background var(--green)
   border-radius 20px
   border-bottom none
 
@@ -200,16 +242,28 @@ section
   font-size 1.3rem
 
 .blue
-  color $blue
-
-.blue-light
-  color $blue-light
+  color var(--blue)
 
 .green
-  color $green
+  color var(--green)
 
-.green-light
-  color $green-light
+.letter-1
+  color var(--letter-1)
+
+.letter-2
+  color var(--letter-2)
+
+.letter-3
+  color var(--letter-3)
+
+.letter-4
+  color var(--letter-4)
+
+.letter-5
+  color var(--letter-5)
+
+.letter-6
+  color var(--letter-6)
 
 .screen-reader-only
   position absolute
